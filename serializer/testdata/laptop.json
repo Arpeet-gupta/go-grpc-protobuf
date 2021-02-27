@@ -1,0 +1,72 @@
+{
+ "id":  "b506dc00-8541-4963-8961-ae3a4404ad41",
+ "brand":  "Apple",
+ "name":  "Macbook Air",
+ "cpu":  {
+  "brand":  "Intel",
+  "name":  "Core i3",
+  "numberCores":  7,
+  "numberThreads":  11,
+  "minGhz":  2.9566043639546526,
+  "maxGhz":  4.871216633703184
+ },
+ "ram":  {
+  "value":  "47",
+  "unit":  "GIGABYTE"
+ },
+ "gpus":  [
+  {
+   "brand":  "NVIDIA",
+   "name":  "GTX 1670",
+   "minGhz":  1.2505808592676986,
+   "maxGhz":  1.5023990447496947,
+   "memory":  {
+    "value":  "3",
+    "unit":  "GIGABYTE"
+   }
+  },
+  {
+   "brand":  "AMD",
+   "name":  "RX 590",
+   "minGhz":  1.3815411544391119,
+   "maxGhz":  1.8681009338527663,
+   "memory":  {
+    "value":  "2",
+    "unit":  "GIGABYTE"
+   }
+  }
+ ],
+ "storages":  [
+  {
+   "driver":  "HDD",
+   "memory":  {
+    "value":  "2",
+    "unit":  "TERABYTE"
+   }
+  },
+  {
+   "driver":  "SSD",
+   "memory":  {
+    "value":  "343",
+    "unit":  "GIGABYTE"
+   }
+  }
+ ],
+ "screen":  {
+  "sizeInch":  13.178306,
+  "resolution":  {
+   "width":  3834,
+   "height":  6816
+  },
+  "panel":  "OLED",
+  "multitouch":  true
+ },
+ "keyboard":  {
+  "layout":  "AZERTY",
+  "backlit":  true
+ },
+ "weightKg":  1.9986004579205379,
+ "priceUsd":  1950.341373308184,
+ "releaseYear":  2015,
+ "updatedAt":  "2021-02-27T09:39:28.547293323Z"
+}
