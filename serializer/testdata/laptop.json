@@ -1,37 +1,37 @@
 {
- "id":  "b506dc00-8541-4963-8961-ae3a4404ad41",
- "brand":  "Apple",
- "name":  "Macbook Air",
+ "id":  "4ac2c67d-85d0-439a-8704-210580886879",
+ "brand":  "Dell",
+ "name":  "Alienware",
  "cpu":  {
   "brand":  "Intel",
-  "name":  "Core i3",
-  "numberCores":  7,
-  "numberThreads":  11,
-  "minGhz":  2.9566043639546526,
-  "maxGhz":  4.871216633703184
+  "name":  "Core i9",
+  "numberCores":  8,
+  "numberThreads":  8,
+  "minGhz":  2.8047898452806637,
+  "maxGhz":  4.6278629043724635
  },
  "ram":  {
-  "value":  "47",
+  "value":  "56",
   "unit":  "GIGABYTE"
  },
  "gpus":  [
   {
    "brand":  "NVIDIA",
-   "name":  "GTX 1670",
-   "minGhz":  1.2505808592676986,
-   "maxGhz":  1.5023990447496947,
+   "name":  "RTX 2070",
+   "minGhz":  1.4190141421634492,
+   "maxGhz":  1.9877660922298126,
    "memory":  {
-    "value":  "3",
+    "value":  "5",
     "unit":  "GIGABYTE"
    }
   },
   {
-   "brand":  "AMD",
-   "name":  "RX 590",
-   "minGhz":  1.3815411544391119,
-   "maxGhz":  1.8681009338527663,
+   "brand":  "NVIDIA",
+   "name":  "GTX 1670",
+   "minGhz":  1.3840527917231844,
+   "maxGhz":  1.5640608899003312,
    "memory":  {
-    "value":  "2",
+    "value":  "3",
     "unit":  "GIGABYTE"
    }
   }
@@ -40,33 +40,31 @@
   {
    "driver":  "HDD",
    "memory":  {
-    "value":  "2",
+    "value":  "6",
     "unit":  "TERABYTE"
    }
   },
   {
    "driver":  "SSD",
    "memory":  {
-    "value":  "343",
+    "value":  "312",
     "unit":  "GIGABYTE"
    }
   }
  ],
  "screen":  {
-  "sizeInch":  13.178306,
+  "sizeInch":  15.359325,
   "resolution":  {
-   "width":  3834,
-   "height":  6816
+   "width":  2652,
+   "height":  4714
   },
-  "panel":  "OLED",
-  "multitouch":  true
+  "panel":  "IPS"
  },
  "keyboard":  {
-  "layout":  "AZERTY",
-  "backlit":  true
+  "layout":  "QWERTY"
  },
- "weightKg":  1.9986004579205379,
- "priceUsd":  1950.341373308184,
+ "weightKg":  1.0193695063867476,
+ "priceUsd":  1717.7850515148486,
  "releaseYear":  2015,
- "updatedAt":  "2021-02-27T09:39:28.547293323Z"
+ "updatedAt":  "2021-02-27T10:16:02.291630903Z"
 }
