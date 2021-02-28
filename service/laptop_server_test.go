@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v2/pb"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v2/sample"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v2/service"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/sample"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/service"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

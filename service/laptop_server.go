@@ -5,7 +5,7 @@ import (
 	"errors"
 	"log"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v2/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/pb"
 	"github.com/google/uuid"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -63,9 +63,35 @@ func (server *LaptopServer) CreateLaptop(ctx context.Context, req *pb.CreateLapt
 		return nil, status.Error(code, "cannot save laptop to the in-memory store")
 	}
 	log.Printf("saved laptop with id: %s", laptop.Id)
-
+	// will change laptop object value here so that value in Inmemeory database laptop object also get changed {without having deep copy save}
+	// and after change value from here , verify that value has changed by geeting latop value from database.
 	res := &pb.CreateLaptopResponse{
 		Id: laptop.Id,
 	}
 	return res, nil
+}
+
+//SearchLaptop is a server-streaming RPC to search for laptops
+func (server *LaptopServer) SearchLaptop(req *pb.SearchLaptopRequest, stream pb.LaptopService_SearchLaptopServer) error {
+	filter := req.GetFilter()
+	log.Printf("receive a search-laptop request with filter: %v", filter)
+
+	err := server.Store.Search(
+		stream.Context(),
+		filter,
+		func(laptop *pb.Laptop) error {
+			res := &pb.SearchLaptopResponse{Laptop: laptop}
+
+			err := stream.Send(res)
+			if err != nil {
+				return err
+			}
+			log.Printf("send laptop with id: %s", laptop.GetId())
+			return nil
+		})
+
+	if err != nil {
+		return status.Errorf(codes.Internal, "unexpected error: %v", err)
+	}
+	return nil
 }
