@@ -14,10 +14,10 @@ test-all:
 	gotest -cover ./...
 	# gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v2/service/ github.com/Arpeet-gupta/go-grpc-protobuf/v2/serializer
 test-protobuf-serializer:
-	gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v2/serializer/
+	gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v3/serializer/
 test-grpc:
-	gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v2/service/
+	gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v3/service/
 test-grpc-server:
-	gotest -cover -run TestServerCreateLaptop github.com/Arpeet-gupta/go-grpc-protobuf/v2/service/
+	gotest -cover -run TestServerCreateLaptop github.com/Arpeet-gupta/go-grpc-protobuf/v3/service/
 test-grpc-client:
-	gotest -cover -run TestClientCreateLaptop github.com/Arpeet-gupta/go-grpc-protobuf/v2/service/
+	gotest -cover -run TestClientCreateLaptop github.com/Arpeet-gupta/go-grpc-protobuf/v3/service/
