@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/pb"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/sample"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/service"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/sample"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/service"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -66,7 +66,7 @@ func TestServerCreateLaptop(t *testing.T) {
 			req := &pb.CreateLaptopRequest{
 				Laptop: tc.laptop,
 			}
-			server := service.NewLaptopServer(tc.store)
+			server := service.NewLaptopServer(tc.store, nil)
 			res, err := server.CreateLaptop(context.Background(), req)
 			if tc.code == codes.OK {
 				require.NoError(t, err)

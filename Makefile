@@ -12,12 +12,13 @@ client:
 test-all:
 	# ./... matches all the packages in the module
 	gotest -cover ./...
-	# gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v2/service/ github.com/Arpeet-gupta/go-grpc-protobuf/v2/serializer
+	# gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v4/service/ github.com/Arpeet-gupta/go-grpc-protobuf/v4/serializer
 test-protobuf-serializer:
-	gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v3/serializer/
+	gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v4/serializer/
 test-grpc:
-	gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v3/service/
+	gotest -cover github.com/Arpeet-gupta/go-grpc-protobuf/v4/service/
 test-grpc-server:
-	gotest -cover -run TestServerCreateLaptop github.com/Arpeet-gupta/go-grpc-protobuf/v3/service/
+	gotest -cover -run TestServerCreateLaptop github.com/Arpeet-gupta/go-grpc-protobuf/v4/service/
 test-grpc-client:
-	gotest -cover -run TestClientCreateLaptop github.com/Arpeet-gupta/go-grpc-protobuf/v3/service/
+	# gotest -cover -run TestClientCreateLaptop github.com/Arpeet-gupta/go-grpc-protobuf/v4/service/
+	gotest -cover -run TestClientUploadImage github.com/Arpeet-gupta/go-grpc-protobuf/v4/service/

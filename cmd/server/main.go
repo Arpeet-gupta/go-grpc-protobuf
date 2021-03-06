@@ -6,8 +6,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/pb"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/service"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/service"
 	"google.golang.org/grpc"
 )
 
@@ -20,8 +20,9 @@ func main() {
 	//This LaptopServer struct's object  behave as router= mux.router()
 	//router object holds 'HandleFunctions' for specfic PATH and Method in REST Request (router.HandleFunc("/posts", addAuthor).Methods("POST") )
 	// Similarly  LaptopServer's object holds 'HandleMethods' defined by RPC service interface.
-
-	laptopServer := service.NewLaptopServer(service.NewInMemoryLaptopStore())
+	laptopStore := service.NewInMemoryLaptopStore()
+	imageStore := service.NewDiskImageStore("img")
+	laptopServer := service.NewLaptopServer(laptopStore, imageStore)
 	grpcServer := grpc.NewServer()
 	//Like we register router with server, server:= http.Server{Addr: :8080, Handler: router}, simimarly we have to register LaptopServer object with grpcServer using RegisterLaptopServiceServer() function
 	//Register our service implementation with the gRPC server

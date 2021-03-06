@@ -7,7 +7,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/pb"
 	"github.com/jinzhu/copier"
 )
 

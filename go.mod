@@ -1,4 +1,4 @@
-module github.com/Arpeet-gupta/go-grpc-protobuf/v3
+module github.com/Arpeet-gupta/go-grpc-protobuf/v4
 
 go 1.15
 

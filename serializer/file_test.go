@@ -3,9 +3,9 @@ package serializer_test
 import (
 	"testing"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/pb"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/sample"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v3/serializer"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/sample"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/serializer"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/proto"
 )
