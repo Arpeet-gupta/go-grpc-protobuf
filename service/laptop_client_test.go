@@ -111,7 +111,7 @@ func TestClientSearchLaptop(t *testing.T) {
 func TestClientUploadImage(t *testing.T) {
 	t.Parallel()
 
-	testImageFolder := "service/testdata/"
+	testImageFolder := "testdata"
 
 	laptopStore := service.NewInMemoryLaptopStore()
 	imageStore := service.NewDiskImageStore(testImageFolder)

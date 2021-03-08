@@ -104,7 +104,7 @@ func (server *LaptopServer) SearchLaptop(req *pb.SearchLaptopRequest, stream pb.
 func (server *LaptopServer) UploadImage(stream pb.LaptopService_UploadImageServer) error {
 	req, err := stream.Recv()
 	if err != nil {
-		return logError(status.Errorf(codes.Unknown, "cannot receive image info", err))
+		return logError(status.Errorf(codes.Unknown, "cannot receive image info: %v", err))
 	}
 	laptopID := req.GetInfo().GetLaptopId()
 	imageType := req.GetInfo().GetImageType()
@@ -162,7 +162,7 @@ func (server *LaptopServer) UploadImage(stream pb.LaptopService_UploadImageServe
 	}
 	res := &pb.UploadImageResponse{
 		Id:   imageID,
-		Size: uint32(maxImageSize),
+		Size: uint32(imageSize),
 	}
 	err = stream.SendAndClose(res)
 	if err != nil {
