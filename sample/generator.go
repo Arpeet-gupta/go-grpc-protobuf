@@ -1,7 +1,7 @@
 package sample
 
 import (
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/pb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
@@ -117,4 +117,9 @@ func NewLaptop() *pb.Laptop {
 		UpdatedAt:   timestamppb.Now(),
 	}
 	return laptop
+}
+
+// RandomLaptopScore returns a random laptop score
+func RandomLaptopScore() float64 {
+	return float64(randomInt(1, 10))
 }

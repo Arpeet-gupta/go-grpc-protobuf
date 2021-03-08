@@ -6,8 +6,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/pb"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v4/service"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/service"
 	"google.golang.org/grpc"
 )
 
@@ -22,7 +22,8 @@ func main() {
 	// Similarly  LaptopServer's object holds 'HandleMethods' defined by RPC service interface.
 	laptopStore := service.NewInMemoryLaptopStore()
 	imageStore := service.NewDiskImageStore("img")
-	laptopServer := service.NewLaptopServer(laptopStore, imageStore)
+	ratingStore := service.NewInMemoryRatingStore()
+	laptopServer := service.NewLaptopServer(laptopStore, imageStore, ratingStore)
 	grpcServer := grpc.NewServer()
 	//Like we register router with server, server:= http.Server{Addr: :8080, Handler: router}, simimarly we have to register LaptopServer object with grpcServer using RegisterLaptopServiceServer() function
 	//Register our service implementation with the gRPC server
