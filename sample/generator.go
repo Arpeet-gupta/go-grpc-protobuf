@@ -1,7 +1,7 @@
 package sample
 
 import (
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v6/pb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 

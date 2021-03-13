@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/pb"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/sample"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v6/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v6/sample"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

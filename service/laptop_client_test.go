@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/pb"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/sample"
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/service"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v6/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v6/sample"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v6/service"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 )

@@ -7,7 +7,7 @@ import (
 	"io"
 	"log"
 
-	"github.com/Arpeet-gupta/go-grpc-protobuf/v5/pb"
+	"github.com/Arpeet-gupta/go-grpc-protobuf/v6/pb"
 	"github.com/google/uuid"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
